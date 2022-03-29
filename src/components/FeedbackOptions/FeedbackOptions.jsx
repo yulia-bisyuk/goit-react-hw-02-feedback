@@ -3,13 +3,16 @@ import PropTypes from 'prop-types';
 import { Button } from './FeedbackOptions.style';
 
 const makeBgColor = (option) => {
-  if(option === 'good') {
-          return "#457d54"
-  } else if (option === 'bad') {
-     return "#d96452"
-  } else {
-    return "#787675"
-         }
+  switch (option) {
+    case 'good':
+      return "#457d54";
+    case 'bad':
+      return "#d96452";
+    case 'neutral':
+      return "#787675";
+    default:
+      return "#00000";
+  }
 
 }
 
